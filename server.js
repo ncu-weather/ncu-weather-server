@@ -26,8 +26,8 @@ app.get('/bonus', (req, res) => {
 })
 
 
-process.env.PORT = 3000
+const PORT = process.env.PORT || 3000
 const server = http.createServer(app)
-server.listen(process.env.PORT, () => {
-  console.log(`Server running on http://localhost:${process.env.PORT}`)
+server.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`)
 })
