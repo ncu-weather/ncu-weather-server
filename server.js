@@ -4,7 +4,13 @@ const http = require('http')
 const ncu = require('ncu')
 
 
+app.use(express.static('public'))
+
+
 app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html')
+})
+app.get('/ncuatm', (req, res) => {
   ncu.weatherAtm().then(data => {
     res.json(data)
   }).catch(err => {
