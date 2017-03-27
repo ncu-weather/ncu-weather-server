@@ -4,8 +4,11 @@
   "description": "NCU Weather API Server",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ncu-weather/server.git"
   },
   "author": "lovenery",
   "license": "ISC",
@@ -15,5 +18,8 @@
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
+  },
+  "engines": {
+    "node": "6.10.1"
   }
 }
