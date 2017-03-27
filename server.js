@@ -4,6 +4,7 @@ const http = require('http')
 const ncu = require('ncu')
 
 
+app.use(require('./config/cors'))
 app.use(express.static('public'))
 
 
