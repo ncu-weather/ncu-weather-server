@@ -1,0 +1,19 @@
+{
+  "name": "ncu-weather-server",
+  "version": "1.0.0",
+  "description": "NCU Weather API Server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "lovenery",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "ncu": "^0.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
