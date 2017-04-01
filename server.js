@@ -15,7 +15,9 @@ app.get('/ncuatm', (req, res) => {
   ncu.weatherAtm().then(data => {
     res.json(data)
   }).catch(err => {
-    res.status(400).json(err.message)
+    res.status(503).json({
+      err: err.message
+    })
   })
 })
 app.get('/ncu', (req, res) => {
@@ -26,10 +28,14 @@ app.get('/ncu', (req, res) => {
   })
 })
 app.get('/time', (req, res) => {
-  res.json(ncu.time())
+  res.json({
+    time: ncu.time()
+  })
 })
 app.get('/bonus', (req, res) => {
-  res.json(ncu.bonus())
+  res.json({
+    bonus: ncu.bonus()
+  })
 })
 
 
