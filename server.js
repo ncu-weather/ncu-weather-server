@@ -15,14 +15,14 @@ app.get('/ncuatm', (req, res) => {
   ncu.weatherAtm().then(data => {
     res.json(data)
   }).catch(err => {
-    res.json(err.message)
+    res.status(400).json(err.message)
   })
 })
 app.get('/ncu', (req, res) => {
   ncu.weather().then(data => {
     res.json(data)
   }).catch(err => {
-    res.json(err.message)
+    res.status(400).json(err.message)
   })
 })
 app.get('/time', (req, res) => {
