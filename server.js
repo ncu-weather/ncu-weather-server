@@ -5,11 +5,11 @@ const ncu = require('ncu')
 
 
 app.use(require('./config/cors'))
-app.use(express.static('public'))
+app.use(express.static(__dirname + '/public'))
 
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html')
+  res.render('index')
 })
 app.get('/ncuatm', (req, res) => {
   ncu.weatherAtm().then(data => {
